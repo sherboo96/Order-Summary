@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: url("./images/pattern-background-desktop.svg") no-repeat top
+    center/contain;
+  background-size: 100%;
+  background-color: var(--pale-blue);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.card > img {
+  width: 450px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-content {
+  width: 450px;
+  padding: 3rem;
+  text-align: center;
+  background-color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-content h1 {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+.card .card-content > p {
+  margin: 20px 0;
+  line-height: 1.6;
+  color: var(--desaturated-blue);
+}
+
+.card .card-content .content-plan {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 15px;
+  border-radius: 10px;
+  background-color: var(--very-pale-blue);
+}
+
+.card .card-content .content-plan img {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+.card .card-content .content-plan .content-text h2 {
+  font-weight: 900;
+  font-size: 16px;
+  color: var(--dark-blue);
+}
+
+.card .card-content .content-plan .content-text p {
+  color: var(--desaturated-blue);
+  margin-top: 5px;
+}
+
+.card .card-content .content-plan a {
+  color: var(--bright-blue);
+  font-size: 14px;
+  font-weight: 900;
+  margin-left: 4rem;
+}
+
+.card .card-content .content-plan a:hover {
+  text-decoration: none;
+}
+
+.card .card-content button {
+  display: block;
+  margin: 25px auto 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.card .card-content button[type="submit"] {
+  width: 100%;
+  color: var(--very-pale-blue);
+  padding: 13px;
+  border-radius: 10px;
+  background-color: var(--bright-blue);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card .card-content .btn {
+  color: var(--desaturated-blue);
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  body {
+    background: url("./images/pattern-background-mobile.svg") no-repeat top
+      center/contain;
+  }
+
+  .card > img {
+    width: 320px;
+  }
+
+  .card .card-content {
+    width: 320px;
+    padding: 1.5rem;
+  }
+
+  .card .card-content h1 {
+    font-size: 24px;
+  }
+
+  .card .card-content .content-plan {
+    padding: 15px 10px;
+  }
+
+  .card .card-content .content-plan > img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+  }
+
+  .card .card-content .content-plan h2,
+  .card .card-content .content-plan p {
+    font-size: 14px;
+  }
+
+  .card .card-content .content-plan a {
+    margin-left: 2rem;
+  }
+}
